@@ -10,7 +10,7 @@ const makeWord = (n) => {
     return thisWord;
 }
 
-export default const makeStr = () => {
+const makeStr = () => {
     let strLength = 150;
     let maxWordLength = 12;
     let maxStringLength = 100;
@@ -23,8 +23,8 @@ export default const makeStr = () => {
         srtToReturn += " ";
     }
     let x = srtToReturn.slice(-1);
-
-    console.log(x);
-    console.log(srtToReturn);
+    
+    return srtToReturn;
 }
 
+export default makeStr;

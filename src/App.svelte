@@ -1,18 +1,28 @@
 <script>
     import Header from "./components/Header.svelte";
+    import TypingArea from "./components/TypingArea.svelte";
 </script>
 
 <div>
     <Header />
     <div class="container">
-        <h1>Hello world!</h1>
-        <h2> THis is just amazing</h2>
-        <h1>This is just another heading</h1>
+        <div class="typing-area">
+            <TypingArea />
+        </div>
     </div>
 </div>
 
 <style>
     div.container {
         margin: 0 10vw;
+        display: flex;
+        justify-content: center;
+        flex-direction: column; 
+        padding: 1% 5%;
+    }
+
+    .typing-area {
+        display: flex;
+        justify-content: center;
     }
 </style>
