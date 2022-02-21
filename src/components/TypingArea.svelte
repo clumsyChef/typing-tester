@@ -3,6 +3,13 @@
     import Screen from "./Screen.svelte";
     const stringToCompare = mainString;
     let someStr = "";
+    const typing = (e) => {
+        let thisKey = e.data;
+        let presentLength = e.target.value.length;
+        
+        console.log(e);
+        console.log(e.target.value.length)
+    }
 
 </script>
 
@@ -10,7 +17,7 @@
     <div class="what-to-type">
         <Screen />
     </div>
-    <textarea rows="7" cols="60" on:input={e => someStr += e.target.value.slice(-1)}></textarea>
+    <textarea rows="7" cols="60" on:input={e => typing(e)}></textarea>
 </div>
 
 <style>
