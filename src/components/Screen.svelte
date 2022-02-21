@@ -1,12 +1,11 @@
 <script context="module">
     import makeStr from "../words/getWords.js";    
-    String.prototype.__proto__ = Array.prototype;
     export const mainString = makeStr().trim();
 </script>
 
 <div>
-    { #each mainString as single, i }
-        <span data-posi={i + 1} class="single-word {i === 0 ? 'highlighted' : ''}">{single}</span>
+    { #each mainString as word, i }
+        <span data-posi={i} class="single-word {i === 0 ? 'highlighted' : ''}">{word}</span>
     { /each }
 </div>
 
