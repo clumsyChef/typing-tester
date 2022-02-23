@@ -1,0 +1,19 @@
+html, body {
+    background-color: #E7F9FF;
+}
+
+.main-screen {
+    padding: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #FFAAAA;
+}
+
+.right-letter { 
+    color: #00a043;
+}
+
+.wrong-letter {
+    color: #FF4545;
+}

@@ -12,7 +12,7 @@ const makeWord = (n) => {
 
 const makeStr = () => {
 	srtToReturn = "";
-	let strLength = 15;
+    let strLength = 150;
 	let maxWordLength = 12;
 	while (srtToReturn.length < strLength) {
 		if (strLength - srtToReturn.length < maxWordLength) {

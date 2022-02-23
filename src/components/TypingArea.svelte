@@ -20,7 +20,8 @@
 			});
 			let nextSpan = document.querySelector(`span[data-posi='${presentLength}']`);
 			if (nextSpan) {
-				document.querySelector(`span[data-posi='${presentLength}']`).classList.add("highlighted");
+                document.querySelector(`span[data-posi='${presentLength}']`).classList.add("highlighted");
+                document.querySelector(`span[data-posi='${presentLength}']`).previousElementSibling.classList.add("right-letter");
 			} else {
 				let finalTime = new Date().getTime();
 				let millis = (finalTime - timer) / 1000;
@@ -30,7 +31,8 @@
 				console.log(totalTime / totalBajji);
 				console.log(newString);
 				e.target.value = "";
-				stringToCompare = newString;
+                stringToCompare = newString;
+                document.querySelectorAll("span[data-posi]").forEach((elem) => elem.classList.remove("right-letter"));
 			}
 		} else {
 			e.target.value = e.target.value.slice(0, -1);
@@ -51,10 +53,5 @@
 		font-weight: 700;
 		font-family: "Noto Sans Mono";
 		padding: 25px;
-	}
-
-	.what-to-type {
-		color: red;
-		display: flex;
 	}
 </style>
